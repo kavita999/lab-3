@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>FeedBack
+    </title>
+</head>
+<body>
+    <div class="parent">
+       <div class="child_left">
+           <div class="user_input">
+                <ul>
+                    <li> 
+                        <label>First Name</label>
+                        <input autocomplete="none" type="text" name="fn" id="fn">
+                    </li>
+                    <li> 
+                        <label>Middle Name</label>
+                        <input autocomplete="none"  type="text" name="mn" id="mn">
+                    </li>
+                    <li> 
+                        <label>Last Name</label>
+                        <input autocomplete="none"  type="text" name="ln" id="ln">
+                    </li>
+                    <li> 
+                        <label>FeedBack</label>
+                        <textarea type="text" name="feed" id="feed"></textarea>
+                    </li>
+                    <li> 
+                        <label id="gender_label">Gender</label>
+                        <div class="gen_radio">
+                            <span>Male</span><input type="radio" name="gender" id="gender" value="Mr. ">
+                        </div>
+                        <div class="gen_radio">
+                            <span>Female</span><input type="radio" name="gender" id="gender" value="Ms. ">
+                       </div>
+                        
+                    </li>
+                    <li>
+                        <button id="Add_button">Add</button>
+                        <button id="Clear_button">Clear</button>
+                    </li>
+                </ul>
+           </div>
+       </div>
+       <div class="child_right">
+            <div id="msg_list" >
+                <!-- ----------------------------------- -->
+                <!-- all new feebacks are appended here  -->
+                <!-- ----------------------------------- -->
+            </div>
+    </div>
+    </div>
+
+    <script src="./fb.js"></script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+body{
+    padding:0;
+    margin:0;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.parent{
+    width: 100%;
+    height: 100%;
+    background: rgb(199, 90, 250);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 100px;
+}
+
+.child_left{
+    width: 40%;
+    height: 70%;
+    background: #0003;
+    position: relative;
+    overflow: hidden;
+    transition: .4s;
+}
+.child_left::before{
+    content: "FEEDBACK";
+    position: absolute;
+    height: auto;
+    width: 100%;
+    background: rgb(0, 68, 255);
+    box-shadow: 0px 5px 10px rgba(26, 25, 25, 0.404);
+    left: 0;
+    top: 0;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 5px 0px;
+    color:white;
+}
+.child_right{
+    width: 50%;
+    height: 70%;
+    background: #0003;
+    position: relative;
+    overflow: hidden;
+    transition: .4s;
+}
+.child_right::before{
+    content: "TOP FEEDBACKS";
+    position: absolute;
+    height: auto;
+    width: 100%;
+    background: rgb(255, 0, 242);
+    box-shadow: 0px 5px 10px rgba(26, 25, 25, 0.404);
+    left: 0;
+    top: 0;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 5px 0px;
+    color:white;
+}
+.child_left:hover,.child_right:hover{
+    background: #0004;
+}
+.child_left:hover::before,.child_right:hover::before{
+    box-shadow:0px 2px 4px #fff5,0px 5px 10px #fff3;
+}
+.user_input{
+    margin: 50px 5px;
+    display: block;
+}
+ul{
+    position: relative;
+    padding: 0;
+}
+ul li{
+    list-style:none;
+    padding: 10px;
+}
+ul li label{
+    display: block;
+    text-align: left;
+    color: white;
+    margin-left: 10%;
+    text-decoration: underline;
+    padding-bottom: 5px;
+}
+ul li input,ul li textarea{
+    outline: none;
+    border: none;
+    background: none;
+    width: 80%;
+    height: 30px;
+    margin: 0px 10%;
+    text-align: center;
+    color: white;
+    border-bottom: 3px solid rgb(25, 0, 255);
+    background: rgba(73, 73, 211, 0.411);
+    font-size: 1.2rem;
+    transition: .3s steps(50);
+    
+}
+ul li textarea{
+    resize: none;
+    height: 100px;
+    text-align: left;
+}
+ul li input:focus-within,ul li textarea:focus-within{
+    border: 1px solid rgb(0, 255, 115);
+    border-bottom: 3px solid rgb(0, 255, 115);
+}
+#gender_label{
+    display: inline;
+    vertical-align: center;
+}
+.gen_radio{
+    border: 1px solid #00f3;
+    border-bottom: 2px solid rgb(68, 0, 255);
+    background: #00f3;
+    width: 25%;
+    padding: 2px 0px;
+    text-align: center;
+    display:inline-block;
+    color: white;
+    margin: 10px;
+    margin-top: -5px;
+    transition: .3s;
+}
+.gen_radio:hover{
+    border: 1px solid rgb(0, 255, 115);
+    border-bottom: 2px solid rgb(0, 255, 115);
+}
+
+button{
+    outline: none;
+    border: none;
+    background:none;
+    width: 35%;
+    height: 40px;
+    border: 2px solid blue;
+    margin-left: 10%;
+    border-radius: 5px;
+    color: blue;
+    font-size: 1.2rem;
+    transition: .4s;
+}
+button:hover{
+    background: #00f5;
+    color: white;
+    cursor: pointer;
+    transform: scale(1.1);
+    border:2px solid white;
+}
+#msg_list{
+    width: 80%;
+    margin-top: 60px;
+    margin-left: 10%;
+}
+.items{
+    width:auto;
+    border: 2px solid white;
+    background:rgba(156, 50, 255, 0.61);
+    padding:0px 5px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#fetch_name,#fetch_date{
+    margin: 0;
+    padding: 5px;
+    display: inline;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+#fetch_name{
+    float: left;
+   
+}
+#fetch_date{
+    float: right;
+}
+#fetch_msg{
+    clear: both;
+    border-top: 2px solid white;
+    color: black;
+    font-size: 1.1rem;
+    text-align: justify;
+    padding: 5px;
+}
+@media screen and (max-width:1600px)
+{
+    body{
+        overflow: auto;
+    }
+}
+@media screen and (max-width:1000px){
+    body{
+        height: auto;
+    }
+    .parent{
+        display: block;
+    }
+    .child_left{
+        width: 80%;
+    }
+    .child_right{
+        width: 80%;
+        min-height: 700px;
+        height: auto;
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width:1000px){
+    .child_left{
+        width: 100%;
+        padding: 5px;
+    }
+    .child_right{
+       width: 100%;
+       padding: 5px;
+    }
+}
